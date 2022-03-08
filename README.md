@@ -27,4 +27,4 @@ The emergency card is a personalized product. So we need the following data from
 
 The fields must be shorter then 25 characters.
 
-Our shop can be used as template: https://memoresa.de/product/smarte-notfallkarte-mit-digitalem-notfallkoffer/
+Our [shop](https://memoresa.de/product/smarte-notfallkarte-mit-digitalem-notfallkoffer/) can be used as template.
