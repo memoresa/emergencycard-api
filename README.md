@@ -2,7 +2,7 @@
 This API can be used to create new orders for the emergency card [dienotfallkarte.de](https://dienotfallkarte.de). This is relevant for e.g. external resellers with an own shop.
 
 # Before using the API
-Ask in support@memoresa.de for your account. We need the following information, to setup your account:
+Ask in [support@memoresa.de](mailto:support@memoresa.de) for your account. We need the following information, to setup your account:
 * Your EMail
 * Name of your Shop
 * Your Address
