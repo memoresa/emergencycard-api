@@ -1,5 +1,5 @@
 # emergencycard-api
-This API can be used to create new orders for the emergency card https://dienotfallkarte.de. This is relevant for e.g. external resellers with an own shop.
+This API can be used to create new orders for the emergency card [dienotfallkarte.de](https://dienotfallkarte.de). This is relevant for e.g. external resellers with an own shop.
 
 # Before using the API
 Ask in support@memoresa.de for your account. We need the following information, to setup your account:
@@ -15,7 +15,7 @@ With this information, we create your account and send you your access data and,
 ??? BASIC AUTH with name/passwd? 
 
 # Calling the API
-The call is a simple POST request to https://api-develop.memoresa.de/swagger-ui/index.html?configUrl=%2Fv3%2Fapi-docs%2Fswagger-config&urls.primaryName=emergencyShop#/emergency-shop-controller/patchPageContents
+The call is a simple POST request to [emergency-shop-controller](https://api-develop.memoresa.de/swagger-ui/index.html?configUrl=%2Fv3%2Fapi-docs%2Fswagger-config&urls.primaryName=emergencyShop#/emergency-shop-controller/patchPageContents)
 ....
 
 # Your Shop
