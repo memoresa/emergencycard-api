@@ -1,5 +1,5 @@
 # emergencycard-api
-This API can be used to create new orders for emergency card. This is relevant for e.g. external resellers with an own shop.
+This API can be used to create new orders for the emergency card https://dienotfallkarte.de. This is relevant for e.g. external resellers with an own shop.
 
 # Before using the API
 Ask in support@memoresa.de for your account. We need the following information, to setup your account:
