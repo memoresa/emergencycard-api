@@ -1,4 +1,4 @@
-theme: jekyll-theme-merlot
+theme: jekyll-theme-slate
 title: The emergency card API
 logo: /assets/logo.png
 description: The API for resellers of the emergency card
