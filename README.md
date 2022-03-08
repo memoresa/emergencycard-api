@@ -15,10 +15,8 @@ With this information, we create your account and send you your access data and,
 ??? BASIC AUTH with name/passwd? 
 
 # Calling the API
-The call is a simple POST request to [emergency-shop-controller](https://api-develop.memoresa.de/swagger-ui/index.html?configUrl=%2Fv3%2Fapi-docs%2Fswagger-config&urls.primaryName=emergencyShop#/emergency-shop-controller/patchPageContents)
+The call is a simple POST request to [emergency-shop-controller](swagger.html)
 ....
-
-[s](swagger.html)
 
 # Your Shop
 The emergency card is a personalized product. So we need the following data from your customer, before we print the card:
