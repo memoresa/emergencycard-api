@@ -1,1 +1,340 @@
-{"openapi":"3.0.1","info":{"title":"memoresa API","description":"This is the memoresa RESTful service."},"servers":[{"url":"https://api-develop.memoresa.de","description":"Generated server url"}],"paths":{"/api/emergency/shop/orders/emergencyCard":{"post":{"tags":["emergency-shop-controller"],"operationId":"patchPageContents","requestBody":{"content":{"application/json":{"schema":{"$ref":"#/components/schemas/EmergencyCardOrderRequestTO"}}},"required":true},"responses":{"405":{"description":"Method Not Allowed","content":{"*/*":{"schema":{"$ref":"#/components/schemas/ApiError"}}}},"404":{"description":"Not Found","content":{"*/*":{"schema":{"$ref":"#/components/schemas/ApiError"}}}},"401":{"description":"Unauthorized","content":{"*/*":{"schema":{"$ref":"#/components/schemas/ApiError"}}}},"400":{"description":"Bad Request","content":{"*/*":{"schema":{"$ref":"#/components/schemas/ApiError"}}}},"200":{"description":"OK","content":{"*/*":{"schema":{"$ref":"#/components/schemas/EmergencyCardOrderResponseTO"}}}}}}},"/api/emergency/shop/profile":{"get":{"tags":["emergency-shop-controller"],"operationId":"getResellerProfile","responses":{"405":{"description":"Method Not Allowed","content":{"*/*":{"schema":{"$ref":"#/components/schemas/ApiError"}}}},"404":{"description":"Not Found","content":{"*/*":{"schema":{"$ref":"#/components/schemas/ApiError"}}}},"401":{"description":"Unauthorized","content":{"*/*":{"schema":{"$ref":"#/components/schemas/ApiError"}}}},"400":{"description":"Bad Request","content":{"*/*":{"schema":{"$ref":"#/components/schemas/ApiError"}}}},"200":{"description":"OK","content":{"*/*":{"schema":{"$ref":"#/components/schemas/ResellerProfileTO"}}}}}}}},"components":{"schemas":{"ApiError":{"type":"object","properties":{"message":{"type":"string"},"details":{"type":"string"}}},"EmergencyCardDataTO":{"type":"object","properties":{"name":{"type":"string"},"intolerances":{"type":"string"},"emergencyContactName":{"type":"string"},"emergencyContactPhoneNumber":{"type":"string"},"theme":{"type":"string"}}},"EmergencyCardOrderRequestTO":{"type":"object","properties":{"source":{"type":"string"},"campaign":{"type":"string"},"amount":{"type":"integer","format":"int32"},"cardData":{"$ref":"#/components/schemas/EmergencyCardDataTO"},"shippingAddress":{"$ref":"#/components/schemas/ShippingAddressTO"},"shipToReseller":{"type":"boolean"},"buyerEmail":{"type":"string"},"sendActivationMail":{"type":"boolean"}}},"ShippingAddressTO":{"type":"object","properties":{"name":{"type":"string"},"street":{"type":"string"},"houseNumber":{"type":"string"},"zipCode":{"type":"string"},"city":{"type":"string"},"country":{"type":"string"}}},"EmergencyCardOrderResponseTO":{"type":"object","properties":{"errorMessage":{"type":"string"},"emergencyPageId":{"type":"string","format":"uuid"},"emergencyPageActivationURL":{"type":"string"},"activationMailSent":{"type":"boolean"}}},"ResellerProfileTO":{"type":"object","properties":{"id":{"type":"string"},"email":{"type":"string"},"name":{"type":"string"},"image":{"type":"array","items":{"type":"string","format":"byte"}},"address":{"type":"string"},"city":{"type":"string"},"zip":{"type":"string"},"country":{"type":"string"},"phone":{"type":"string"}}}}}}
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "memoresa API",
+    "description": "This is the memoresa RESTful service."
+  },
+  "servers": [
+    {
+      "url": "https://api-develop.memoresa.de",
+      "description": "Generated server url"
+    }
+  ],
+  "paths": {
+    "/api/emergency/shop/orders/emergencyCard": {
+      "post": {
+        "tags": [
+          "emergency-shop-controller"
+        ],
+        "operationId": "patchPageContents",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EmergencyCardOrderRequestTO"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "405": {
+            "description": "Method Not Allowed",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/EmergencyCardOrderResponseTO"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/emergency/shop/profile": {
+      "get": {
+        "tags": [
+          "emergency-shop-controller"
+        ],
+        "operationId": "getResellerProfile",
+        "responses": {
+          "405": {
+            "description": "Method Not Allowed",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResellerProfileTO"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "ApiError": {
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string"
+          },
+          "details": {
+            "type": "string"
+          }
+        }
+      },
+      "EmergencyCardDataTO": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "The name of the customer. This value must consist of max. 24 characters since it will be printed onto the emergency card.",
+            "maxLength": 24,
+            "required": true
+          },
+          "intolerances": {
+            "type": "string",
+            "description": "Important intorlerances, e.g. Ibuprofen. This value must consist of max. 24 characters since it will be printed onto the emergency card.",
+            "maxLength": 24,
+            "required": false
+          },
+          "emergencyContactName": {
+            "type": "string",
+            "description": "The name of the most important emergency contact. This value must consist of max. 24 characters since it will be printed onto the emergency card.",
+            "maxLength": 24,
+            "required": false
+          },
+          "emergencyContactPhoneNumber": {
+            "type": "string",
+            "description": "The phone number of the most important emergency contact. This value must consist of max. 24 characters since it will be printed onto the emergency card.",
+            "maxLength": 24,
+            "required": false
+          },
+          "theme": {
+            "type": "string",
+            "description": "Only valid emergency card themes are accepted. Please ask for a list of valid themes and request new themes at memoresa support. If the theme property is omitted and the reseller's theme matches one of our eligible card branding themes this theme will be taken. Otherwise the default theme 'mem' is taken for un-branded memoresa cards.",
+            "required": false
+          }
+        }
+      },
+      "EmergencyCardOrderRequestTO": {
+        "type": "object",
+        "properties": {
+          "campaign": {
+            "type": "string",
+            "description": "Any string for the identification of a marketing campaign that led to this purchase.",
+            "required": false
+          },
+          "amount": {
+            "type": "integer",
+            "format": "int32",
+            "default": 1,
+            "description": "The number of cards to be ordered. All cards of a single order will be identical!",
+            "required": false
+          },
+          "cardData": {
+            "$ref": "#/components/schemas/EmergencyCardDataTO",
+            "description": "The data to be printed onto the emergency card.",
+            "required": true
+          },
+          "shippingAddress": {
+            "$ref": "#/components/schemas/ShippingAddressTO",
+            "description": "The address of the client to which the emergency cards will be shipped. If this address is omitted or shipToReseller is set to true the cards will be shipped to the reseller address.",
+            "required": false
+          },
+          "shipToReseller": {
+            "type": "boolean",
+            "default": false,
+            "description": "If this field is set to true the emergency cards are shipped to the reseller address. If the shipping address is omitted this property must be set to true.",
+            "required": true
+          },
+          "buyerEmail": {
+            "type": "string",
+            "description": "The email of the buyer to which an emergency card activation mail will be sent.",
+            "required": false
+          },
+          "sendActivationMail": {
+            "type": "boolean",
+            "description": "Whether to send an emergency card activation mail or not.",
+            "required": true
+          }
+        }
+      },
+      "ShippingAddressTO": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "The name of the receiver of the emergency cards.",
+            "required": true
+          },
+          "street": {
+            "type": "string",
+            "description": "The street of the emergency card receiver.",
+            "required": true
+          },
+          "houseNumber": {
+            "type": "string",
+            "description": "The house number of the emergency card receiver.",
+            "required": true
+          },
+          "zipCode": {
+            "type": "string",
+            "description": "the zip code of the emergency card receiver.",
+            "required": true
+          },
+          "city": {
+            "type": "string",
+            "description": "The city of the emergency card receiver.",
+            "required": true
+          },
+          "country": {
+            "type": "string",
+            "format": "ISO 3166-1 alpha-2 country code (e.g.: DE, AT, ES)",
+            "description": "The country code of the emergency card receiver.",
+            "required": true
+          }
+        }
+      },
+      "EmergencyCardOrderResponseTO": {
+        "type": "object",
+        "properties": {
+          "errorMessage": {
+            "type": "string",
+            "description": "In case of errors the response will contain only this field which points to the error in the request."
+          },
+          "emergencyPageId": {
+            "type": "string",
+            "format": "uuid",
+            "description": "The id of the emergency page which has been reserved for the ordered emergency card."
+          },
+          "emergencyPageActivationURL": {
+            "type": "string",
+            "description": "The URL which can be used to activate the emergency page for the ordered card(s). This URL is intended to be used by the customer. Once the page has been activated the link will be invalidated."
+          },
+          "activationMailSent": {
+            "type": "boolean",
+            "description": "Whether an activation mail has been sent to the customer or not."
+          }
+        }
+      },
+      "ResellerProfileTO": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "The id of the reseller user."
+          },
+          "email": {
+            "type": "string",
+            "description": "The email address of the reseller user."
+          },
+          "name": {
+            "type": "string",
+            "description": "The name of the reseller user."
+          },
+          "image": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "format": "byte"
+            },
+            "description": "The base64-encoded profile picture of the reseller."
+          },
+          "address": {
+            "type": "string",
+            "description": "The street and house number of the reseller."
+          },
+          "city": {
+            "type": "string",
+            "description": "The city of the reseller."
+          },
+          "zip": {
+            "type": "string",
+            "description": "The zip code of the reseller."
+          },
+          "country": {
+            "type": "string",
+            "description": "The ISO 3166-1 alpha-2 country code of the reseller."
+          },
+          "phone": {
+            "type": "string",
+            "description": "The phone number of the reseller."
+          }
+        }
+      }
+    }
+  }
+}
