@@ -21,7 +21,10 @@ Authorization: Baerer <<Token>>
 
 # Calling the API
 The call is a simple POST request to [emergency-shop-controller](swagger.html)
-....
+
+The hosts are
+* for development: https://api-develop.memoresa.dev
+* for production: https://api.memoresa.de
 
 # Your Shop
 The emergency card is a personalized product. So we need the following data from your customer, before we print the card:
